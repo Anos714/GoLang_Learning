@@ -1,3 +1,4 @@
+
 # GoLang Learning Journey
 
 [![Go Version](https://img.shields.io/badge/Go-1.26.2-00ADD8?style=flat-square&logo=go)](https://golang.org/)
@@ -33,9 +34,10 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 | **14** | [`14_slice_length_and_capacity/`](./14_slice_length_and_capacity/) | Internal mechanics of slices: length (`len`), capacity (`cap`), and backing arrays. |
 | **15** | [`15_for_range_over_slice/`](./15_for_range_over_slice/) | Idiomatic iteration over slices using the `range` keyword, index, and value extraction. |
 | **16** | [`16_map/`](./16_map/) | Hash maps, key-value pairs, dynamic allocation with `make()`, element deletion, and the **comma-ok** idiom. |
+| **17** | [`17_functions/`](./17_functions/) | Function declarations, multiple return values, named (naked) returns, and variadic functions (`...int`). |
+| **18** | [`18_anonymous_function/`](./18_anonymous_function/) | Anonymous functions, Immediately Invoked Function Expressions (IIFE), inline argument passing, and assigning functions to variables. |
 
 ---
-
 ## 🛠️ Tech Stack & Requirements
 
 *   **Language:** Go (Golang)
