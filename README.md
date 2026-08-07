@@ -38,6 +38,8 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 | **18** | [`18_anonymous_function/`](./18_anonymous_function/) | Anonymous functions, Immediately Invoked Function Expressions (IIFE), inline argument passing, and assigning functions to variables. |
 | **19** | [`19_error_return_pattern/`](./19_error_return_pattern/) | Idiomatic error handling, returning errors as normal values, custom error formatting with `fmt.Errorf`, and error propagation. |
 | **20** | [`20_defer_basics/`](./20_defer_basics/) | The `defer` statement, scheduling function execution, and guaranteeing resource cleanup across all return paths. |
+| **21** | [`21_pointers/`](./21_pointers/) | Introduction to pointers, memory addresses, and dereferencing in Go. |
+| **22** | [`22_structs/`](./22_structs/) | Struct definition, named vs. positional initialization, zero values, struct pointers, embedding (composition), struct tags (JSON), and method receivers. |
 
 ---
 ## 🛠️ Tech Stack & Requirements
