@@ -4,8 +4,15 @@ import (
 	"fmt"
 	"log"
 	"strconv"
-
 )
+
+
+func divide(a,b float64)(float64,error){
+	if b==0{
+		return 0, fmt.Errorf("division by zero")
+	}
+	return a/b,nil
+}
 
 func main() {
 	// go don't use exceptions for normal failures
@@ -23,10 +30,17 @@ if err:=run();err!=nil{
 	log.Fatal(err)
 }
 
-	if val, err := checkAge(15); err != nil {
+	if val, err := checkAge(18); err != nil {
 		log.Fatal(err)
 	} else {
 		fmt.Println("Age: ", val)
+	}
+
+
+	if val,err:=divide(10,0);err!=nil{
+		log.Fatal(err)
+	} else {
+		fmt.Println("Result: ", val)
 	}
 }
 
