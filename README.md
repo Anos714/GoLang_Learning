@@ -40,6 +40,8 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 | **20** | [`20_defer_basics/`](./20_defer_basics/) | The `defer` statement, scheduling function execution, and guaranteeing resource cleanup across all return paths. |
 | **21** | [`21_pointers/`](./21_pointers/) | Introduction to pointers, memory addresses, and dereferencing in Go. |
 | **22** | [`22_structs/`](./22_structs/) | Struct definition, named vs. positional initialization, zero values, struct pointers, embedding (composition), struct tags (JSON), and method receivers. |
+| **23** | [`23_methods_val_receiver/`](./23_methods_val_receiver/) | Methods with value receivers, receiving copies of structs, and read-only operations. |
+| **24** | [`24_methods_pointer_receiver/`](./24_methods_pointer_receiver/) | Methods with pointer receivers, modifying struct fields, and avoiding memory copies. |
 
 ---
 ## 🛠️ Tech Stack & Requirements
