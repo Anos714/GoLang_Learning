@@ -44,6 +44,7 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 | **24** | [`24_methods_pointer_receiver/`](./24_methods_pointer_receiver/) | Methods with pointer receivers, modifying struct fields, and avoiding memory copies. |
 | **25** | [`25_golang_module/`](./25_golang_module/) | Go modules, dependency management, project layout (`cmd/` and `internal/`), and package visibility. |
 | **26** | [`26_golang_net_http_module/`](./26_golang_net_http_module/) | Standard library `net/http` module, HTTP servers, routing, JSON encoding/decoding, HTTP GET requests, JSON unmarshalling, and consuming external APIs. |
+| **27** | [`27_practise/`](./27_practise/) | Comprehensive practice module consolidating Go fundamentals: variables, basic types, constants, control structures, arrays, slices, maps, and pointers. |
 
 ---
 ## 🛠️ Tech Stack & Requirements
