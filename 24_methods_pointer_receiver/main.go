@@ -11,10 +11,10 @@ type Student struct{
 }
 
 func (student *Student) printStudentName() string{
-	fmt.Println("student address: ",&student)
+	fmt.Printf("student address: %p\n",student)
 	fmt.Println("student: ",*student)
-	*&student.Name="Bajaj singh"
-	*&student.Age=16
+	student.Name="Bajaj singh"
+	student.Age=16
 	return fmt.Sprintf("Hi i am %s",student.Name)
 }
 
