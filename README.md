@@ -42,6 +42,8 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 | **22** | [`22_structs/`](./22_structs/) | Struct definition, named vs. positional initialization, zero values, struct pointers, embedding (composition), struct tags (JSON), and method receivers. |
 | **23** | [`23_methods_val_receiver/`](./23_methods_val_receiver/) | Methods with value receivers, receiving copies of structs, and read-only operations. |
 | **24** | [`24_methods_pointer_receiver/`](./24_methods_pointer_receiver/) | Methods with pointer receivers, modifying struct fields, and avoiding memory copies. |
+| **25** | [`25_golang_module/`](./25_golang_module/) | Go modules, dependency management, project layout (`cmd/` and `internal/`), and package visibility. |
+| **26** | [`26_golang_net_http_module/`](./26_golang_net_http_module/) | Standard library `net/http` module, HTTP servers, routing, JSON encoding/decoding, HTTP GET requests, JSON unmarshalling, and consuming external APIs. |
 
 ---
 ## 🛠️ Tech Stack & Requirements
@@ -92,7 +94,12 @@ Every module in this repository is designed to be executed independently. To run
 
 To run the `16_map` module:
 
-```bash
+bash
+cd 16_map
+go run main.go
+
+
+---
 # Navigate to the module directory
 cd 16_map
 
