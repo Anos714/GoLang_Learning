@@ -5,6 +5,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"todo-rest-api/config"
 	writeJson "todo-rest-api/utils"
 
 	"github.com/joho/godotenv"
@@ -18,15 +19,15 @@ func testHandler(w http.ResponseWriter,r *http.Request){
 			Message: "Only GET method allowed",
 			Data:nil,
 		})
-		return 
+		return
 	}
-	
+
 	writeJson.WriteJson(w,http.StatusOK,writeJson.DataBody{
 		Success:true,
 		Message:"Api is healthy or live",
 		Data:nil,
 		})
-	return 
+	return
 }
 
 
@@ -35,8 +36,10 @@ func main(){
 	// loading the env
 	err:=godotenv.Load()
 	if err!=nil{
-		log.Println("Warning: No .env file found, relying on system environment variables")
+		log.Fatalf("Warning: No .env file found, relying on system environment variables: %v\n",err)
 	}
+
+	config.ConnectDatabase()
 
 	// a test route
 	http.HandleFunc("/",testHandler)
@@ -45,9 +48,10 @@ func main(){
 	if port==""{
 		port="8000"
 	}
+	fmt.Printf("Server running smoothly on port %s...\n", port)
 	err=http.ListenAndServe(":"+port,nil)
 	if err!=nil{
-		fmt.Printf("Server crash error: %v\n", err)
+		log.Fatalf("Server crash error: %v\n", err)
 	}
-	fmt.Printf("Server running smoothly on port %s...\n", port)
+
 }
