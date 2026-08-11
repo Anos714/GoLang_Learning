@@ -1,4 +1,4 @@
-package writeJson
+package utils
 
 import (
 	"encoding/json"
@@ -8,7 +8,7 @@ import (
 
 type DataBody struct{
  Success bool `json:"success"`
- Message string `json:"messsage"`
+ Message string `json:"messsage,omitempty"`
  Data any `json:"data,omitempty"`
 }
 

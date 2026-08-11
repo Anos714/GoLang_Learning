@@ -11,16 +11,11 @@ type RequestBody struct{
 	Done bool `json:"done"`
 }
 
-func ReadJson(w http.ResponseWriter,r *http.Request){
+func ReadJson(w http.ResponseWriter,r *http.Request)(RequestBody, bool){
 	var data RequestBody
 	err := json.NewDecoder(r.Body).Decode(&data)
 	if err != nil {
-		WriteJson(w,http.StatusBadRequest,DataBody{
-			Success: false,
-			Message: "Invalid Request Body",
-			Data:    nil,
-		})
-		return
+		return data,false
 	}
 
 	// validations of request body
@@ -28,20 +23,8 @@ func ReadJson(w http.ResponseWriter,r *http.Request){
 	data.Title=strings.TrimSpace(data.Title)
 
 	if data.Title == ""{
-		WriteJson(w, http.StatusBadRequest, DataBody{
-			Success: false,
-			Message: "Title is required",
-			Data:    nil,
-		})
-		return
+		return data,false
 	}
 
-	response:=DataBody{
-		Success:  true,
-		Message: "Todo created",
-		Data: data,
-	}
-
-	// use the helper method writeJson to send a response
-	WriteJson(w,http.StatusOK,response)
+	return data,true
 }
