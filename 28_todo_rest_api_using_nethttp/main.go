@@ -6,7 +6,8 @@ import (
 	"net/http"
 	"os"
 	"todo-rest-api/config"
-	writeJson "todo-rest-api/utils"
+	"todo-rest-api/routes"
+	"todo-rest-api/utils"
 
 	"github.com/joho/godotenv"
 )
@@ -14,7 +15,7 @@ import (
 
 func testHandler(w http.ResponseWriter,r *http.Request){
 	if r.Method!=http.MethodGet{
-		writeJson.WriteJson(w,http.StatusMethodNotAllowed,writeJson.DataBody{
+		utils.WriteJson(w,http.StatusMethodNotAllowed,utils.DataBody{
 			Success: false,
 			Message: "Only GET method allowed",
 			Data:nil,
@@ -22,12 +23,11 @@ func testHandler(w http.ResponseWriter,r *http.Request){
 		return
 	}
 
-	writeJson.WriteJson(w,http.StatusOK,writeJson.DataBody{
+	utils.WriteJson(w,http.StatusOK,utils.DataBody{
 		Success:true,
-		Message:"Api is healthy or live",
+		Message:"pong",
 		Data:nil,
 		})
-	return
 }
 
 
@@ -42,7 +42,9 @@ func main(){
 	config.ConnectDatabase()
 
 	// a test route
-	http.HandleFunc("/",testHandler)
+	http.HandleFunc("GET /ping",testHandler)
+	// register all routes
+	routes.RegisterTodoRoutes()
 
 	port:=os.Getenv("PORT")
 	if port==""{
