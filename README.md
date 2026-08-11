@@ -91,7 +91,7 @@ If Go is not installed, download it from the [official Go downloads page](https:
 
 Every module in this repository is designed to be executed independently. To run any specific module, navigate to its directory and run the `main.go` file.
 
-### Example: Running the Maps Module
+### Example 1: Running a Basic Module (e.g., Maps)
 
 To run the `16_map` module:
 
@@ -100,7 +100,23 @@ cd 16_map
 go run main.go
 
 
----
+### Example 2: Running the Todo REST API Module
+
+The `28_todo_rest_api_using_nethttp` module implements a REST API. To run it:
+
+1. Navigate to the module's directory:
+   bash
+   cd 28_todo_rest_api_using_nethttp
+   
+2. Ensure you have a `.env` file configured (or the server will fall back to system environment variables and default port `8000`).
+3. Run the application:
+   bash
+   go run main.go
+   
+4. You can test the server by sending a GET request to the ping endpoint:
+   bash
+   curl http://localhost:8000/ping
+   
 # Navigate to the module directory
 cd 16_map
 
