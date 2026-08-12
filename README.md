@@ -53,9 +53,9 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 *   **Minimum Go Version:** `1.26.2` (as specified in `go.mod`)
 *   **Operating System:** Cross-platform (Linux, macOS, Windows)
 *   **IDE Recommendation:** VS Code (with the official Go extension) or GoLand
+*   **Dependencies:** Standard library focused (external dependencies like JWT and bcrypt have been removed from the Todo REST API to leverage native Go capabilities)
 
 ---
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -108,10 +108,12 @@ The `28_todo_rest_api_using_nethttp` module implements a REST API. To run it:
    bash
    cd 28_todo_rest_api_using_nethttp
    
+   
 2. Ensure you have a `.env` file configured (or the server will fall back to system environment variables and default port `8000`).
 3. Run the application:
    bash
    go run main.go
+   
    
 4. You can test the server by sending a GET request to the ping endpoint:
    bash
