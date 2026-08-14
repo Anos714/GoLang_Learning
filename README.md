@@ -86,7 +86,7 @@ If Go is not installed, download it from the [official Go downloads page](https:
    
 ## 📖 Usage & Execution
 
-Every module in this repository is designed to be executed independently. To run any specific module, navigate to its directory and run the `main.go` file.
+Every module in this repository is designed to be executed independently. To run any specific module, navigate to its directory and run the `main.go` file (or the main entry point).
 
 ### Example 1: Running a Basic Module (e.g., Maps)
 
@@ -115,6 +115,25 @@ The `28_todo_rest_api_using_nethttp` module implements a REST API. To run it:
 4. You can test the server by sending a GET request to the ping endpoint:
    bash
    curl http://localhost:8000/ping
+   
+
+### Example 3: Running the Gin REST API Module (with MongoDB)
+
+The `29_gin_rest_api` module implements a Notes API using the Gin framework and MongoDB. To run it:
+
+1. Navigate to the module's directory:
+   bash
+   cd 29_gin_rest_api
+   
+
+2. Ensure you have MongoDB running and configure your environment variables (such as MongoDB URI and Database name).
+3. Run the application:
+   bash
+   go run cmd/api/main.go
+   
+   Or, if you have [Air](https://github.com/air-verse/air) installed for live reloading:
+   bash
+   air
    
 # Navigate to the module directory
 cd 16_map
