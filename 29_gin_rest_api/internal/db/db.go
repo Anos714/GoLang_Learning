@@ -12,7 +12,7 @@ import (
 
 
 
-func Connect(cfg config.Config) (*mongo.Client, *mongo.Database, error) {
+func Connect(cfg *config.Config) (*mongo.Client, *mongo.Database, error) {
 
 	// Set a 10-second timeout context for the initial connection
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
