@@ -62,31 +62,28 @@ The repository is organized sequentially to build your knowledge step-by-step. B
 
 Ensure you have Go installed on your system. You can verify your installation by running:
 
-```bash
+bash
 go version
-```
+
 
 If Go is not installed, download it from the [official Go downloads page](https://go.dev/dl/).
 
 ### Installation
 
 1. Clone this repository to your local machine:
-   ```bash
+   bash
    git clone https://github.com/Anos714/GoLang_Learning.git
-   ```
+   
 
 2. Navigate into the project directory:
-   ```bash
+   bash
    cd GoLang_Learning
-   ```
+   
 
 3. Initialize/verify the module dependencies:
-   ```bash
+   bash
    go mod tidy
-   ```
-
----
-
+   
 ## 📖 Usage & Execution
 
 Every module in this repository is designed to be executed independently. To run any specific module, navigate to its directory and run the `main.go` file.
@@ -108,13 +105,13 @@ The `28_todo_rest_api_using_nethttp` module implements a REST API. To run it:
    bash
    cd 28_todo_rest_api_using_nethttp
    
-   
-2. Ensure you have a `.env` file configured (or the server will fall back to system environment variables and default port `8000`).
+
+2. Create and configure a `.env` file in this directory (or the server will fall back to system environment variables and default port `8000`).
 3. Run the application:
    bash
    go run main.go
    
-   
+
 4. You can test the server by sending a GET request to the ping endpoint:
    bash
    curl http://localhost:8000/ping
